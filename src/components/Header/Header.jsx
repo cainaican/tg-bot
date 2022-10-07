@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Button from '../button/Button'
+import Button from '../Button/Button'
 
 
 const Header = () => {
@@ -8,7 +8,7 @@ const Header = () => {
 
 	useEffect(() => {
 		tg.ready()
-	}, [])
+	})
 	
 	const  onClose = () => {
 		tg.close();
@@ -16,7 +16,7 @@ const Header = () => {
 	
   return (
 	<div className={'header'}>
-		<Button onClick={onClose} ></Button>
+		<Button onClick={onClose} >Закрыть</Button>
 		<span className= {'username'} >
 			{tg.initDataUnsafe?.user?.username}
 		</span>
